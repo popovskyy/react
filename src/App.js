@@ -24,21 +24,20 @@ function App() {
             date: new Date(2021, 5, 12),
         },
     ];
-
     const [expenses, setExpenses] = useState(expensesDefault)
-
     const newExpenseAddedHandler = (newExpenseData) => {
         const updatedExpenses = [...expenses];
         updatedExpenses.push(newExpenseData);
 
+        console.log(newExpenseData)
         setExpenses(updatedExpenses)
     }
 
     return (
         <div>
-            <h1>REACT</h1>
+            <h1>REACT 81 LESSON</h1>
             <NewExpense onNewExpenseAdded={newExpenseAddedHandler}/>
-            <Expenses expenses={expenses}/>
+            <Expenses expenses={expenses} />
         </div>
     );
 }
